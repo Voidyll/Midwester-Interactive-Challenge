@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Midwestern Interactive's challenge website">
+    <meta name="author" content="Bret S">
+    <title>Midwestern Interactive (challenge)</title>
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="submission-message"></div>
+    <div id="submission-parent">
+    <div id="submission-body">
+      <div id="submission-text">
+        <h2></h2>
+      </div>
+
+      <div id="submission-close-parent">
+        <button class="btn" id="submission-close" onclick="close()">Close</button>
+      </div>
+    </div>
+    </div>
+
+    <header>
+      <div id="logo">
+        <img src="../assets/Logo.png" alt="Midwestern logo"></img>
+      </div>
+
+      <div id="contact">
+        <h4><a href="../html/index.html">home</a></h4>
+      </div>
+    </header>
+
+    <main>
+      <div id="form-background"></div>
+
+      <div id="contact-page">
+      <div id="contact-desc">
+        <div id="contact-header">
+          <h1><u>Loading...</u></h1>
+        </div>
+
+        <div id="contact-body">
+          <p></p>
+        </div>
+      </div>
+
+      <div id="contact-info">
+        <div id="contact-info-header">
+          <h2>Message</h2>
+        </div>
+
+        <form id="contact-form" method="post" action="http://localhost:3000/api/contact/form">
+          <input type="text" id="fname" name="fname" placeholder="First Name">
+          <input type="text" id="lname" name="lname" placeholder="Last Name">
+          <input type="text" id="title" name="title" placeholder="Title">
+          <div id=email>
+          <input type="email" id="email-input" name="email" placeholder="Email" required>
+          <label for="email-input" id="email-label">Required</label>
+          </div>
+          <textarea name="comment" form="contact-form" placeholder="Message"  id="message"></textarea>
+          <input type="submit" id="submit" name="submit">
+        </form>
+      </div>
+      </div>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="../js/contact.js"></script>
+  </body>
+</html>
